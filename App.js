@@ -2,6 +2,7 @@ import React from "react";
 import { StatusBar } from "react-native";
 import AppProvider, { AppContext } from "./Context/AppContext";
 import { APP_PAGES, COLORS } from "./Context/settings";
+import HomeScreen from "./Screens/HomeScreen";
 import LoginScreen from "./Screens/LoginScreen";
 
 function App() {
@@ -33,6 +34,7 @@ const NavWrapper = () => {
       />
 
       {navPage === APP_PAGES.APP.LOGIN && <LoginScreen />}
+      {navPage === APP_PAGES.APP.HOME && <HomeScreen />}
     </>
   );
 };

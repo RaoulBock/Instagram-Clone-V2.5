@@ -25,7 +25,7 @@ const LoginScreen = () => {
       </KeyboardAvoidingView>
       <View style={styles.main}>
         <Text style={styles.title}>Let's sign you in</Text>
-        <Text></Text>
+
         <Input title={"Email"} placeholder={"Someone@something.com"} />
         <Input title={"Password"} placeholder={"••••••••••••"} />
         <View style={styles.btn}>
