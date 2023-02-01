@@ -24,10 +24,17 @@ const LoginScreen = () => {
         </View>
       </KeyboardAvoidingView>
       <View style={styles.main}>
-        <Text style={styles.title}>Login</Text>
+        <Text style={styles.title}>Let's sign you in</Text>
+        <Text></Text>
         <Input title={"Email"} placeholder={"Someone@something.com"} />
         <Input title={"Password"} placeholder={"••••••••••••"} />
-        <Button title={"Login"} />
+        <View style={styles.btn}>
+          <Text style={styles.text}>
+            Don't have an account?{" "}
+            <Text style={{ color: "white" }}>Register</Text>
+          </Text>
+          <Button title={"Login"} />
+        </View>
       </View>
     </View>
   );
@@ -44,7 +51,7 @@ const styles = StyleSheet.create({
   title: {
     color: COLORS.TITLE_TEXT_COLOR,
     fontWeight: "800",
-    fontSize: 38,
+    fontSize: 30,
     marginTop: 20,
   },
   main: {
@@ -61,5 +68,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+  },
+  btn: {
+    marginTop: 20,
+  },
+  text: {
+    color: "#615f62",
+    textAlign: "center",
+    marginBottom: 20,
+    fontSize: 16,
+    fontWeight: "700",
   },
 });

@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     borderRadius: 10,
     marginHorizontal: 10,
-    marginTop: 20,
   },
   title: {
     textAlign: "center",
