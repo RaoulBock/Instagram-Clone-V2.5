@@ -171,7 +171,8 @@ export const MESSAGE_DATA = [
     message:
       "Ipsum qui eu ipsum est deserunt cupidatat consequat Lorem consectetur ad ad ut reprehenderit veniam. Adipisicing amet cupidatat aute eiusmod magna exercitation dolore id et. Ipsum voluptate ex mollit ad ipsum ad exercitation ex tempor irure nostrud ullamco eiusmod. Id qui commodo enim veniam voluptate exercitation esse nostrud nisi nulla velit velit.",
     image:
-      "https://i.insider.com/5cb8b133b8342c1b45130629?width=1136&format=jpeg"
+      "https://i.insider.com/5cb8b133b8342c1b45130629?width=1136&format=jpeg",
+    read: true
   },
   {
     id: 2,
@@ -179,7 +180,8 @@ export const MESSAGE_DATA = [
     message:
       "Aute commodo dolor minim sit nulla elit sunt veniam cillum in. Excepteur magna adipisicing est magna ea ea pariatur. Dolor officia consectetur esse sit adipisicing duis dolore aute sit.",
     image:
-      "https://www.psypost.org/wp-content/uploads/2021/02/Confident-boss-business-man-with-smug-expression-arrogant-smirk-in-suit-and-tie-750x375.jpg"
+      "https://www.psypost.org/wp-content/uploads/2021/02/Confident-boss-business-man-with-smug-expression-arrogant-smirk-in-suit-and-tie-750x375.jpg",
+    read: true
   },
   {
     id: 3,
@@ -187,7 +189,8 @@ export const MESSAGE_DATA = [
     message:
       "Pariatur voluptate sit irure ad veniam amet. Pariatur elit nisi culpa laborum do. Dolore et exercitation est Lorem ad aute officia.",
     image:
-      "https://images.everydayhealth.com/images/tips-for-people-newly-diagnosed-with-multiple-sclerosis-alt-1440x810.jpg"
+      "https://images.everydayhealth.com/images/tips-for-people-newly-diagnosed-with-multiple-sclerosis-alt-1440x810.jpg",
+    read: true
   },
   {
     id: 4,
@@ -195,6 +198,16 @@ export const MESSAGE_DATA = [
     message:
       "Do labore ullamco dolor et ex adipisicing magna officia nulla aute incididunt amet. Dolor laborum est nisi sit non qui nostrud. Adipisicing eiusmod magna labore culpa amet ipsum commodo quis. Esse cupidatat duis nulla officia mollit mollit cupidatat velit voluptate anim ad commodo.",
     image:
-      "https://static.bangkokpost.com/media/content/20200619/c1_1937552_200619122619.jpg"
+      "https://static.bangkokpost.com/media/content/20200619/c1_1937552_200619122619.jpg",
+    read: false
+  },
+  {
+    id: 5,
+    name: "Jameson",
+    message:
+      "Fugiat laboris magna ea reprehenderit proident amet. Officia minim Lorem irure ex. Deserunt sint eu officia ea velit labore ad dolore velit fugiat. Irure cillum ut nostrud labore do aliqua labore proident ullamco eu elit adipisicing adipisicing.",
+    image:
+      "https://media.vogue.fr/photos/62836d82c184d8f52600ebdb/2:3/w_2560%2Cc_limit/IMG_2883.jpg",
+    read: true
   }
 ];

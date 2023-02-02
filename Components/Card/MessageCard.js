@@ -4,7 +4,7 @@ import { COLORS } from "../../Context/settings";
 
 const MessageCard = ({ item }) => {
   return (
-    <TouchableOpacity style={styles.outline}>
+    <TouchableOpacity style={item.read ? styles.outline : styles.container}>
       <Image source={{ uri: item.image }} style={styles.image} />
       <View style={{ paddingHorizontal: 20 }}>
         <Text style={styles.text}>{item.name}</Text>
@@ -22,6 +22,15 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginHorizontal: 20,
     marginBottom: 20
+  },
+  container: {
+    flexDirection: "row",
+    marginTop: 10,
+    marginHorizontal: 20,
+    marginBottom: 20,
+    backgroundColor: "#2e313b",
+    padding: 10,
+    borderRadius: 10
   },
   image: {
     width: 70,
