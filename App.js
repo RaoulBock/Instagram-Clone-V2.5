@@ -4,6 +4,7 @@ import AppProvider, { AppContext } from "./Context/AppContext";
 import { APP_PAGES, COLORS } from "./Context/settings";
 import HomeScreen from "./Screens/HomeScreen";
 import LoginScreen from "./Screens/LoginScreen";
+import MessageScreen from "./Screens/MessageScreen";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ const NavWrapper = () => {
 
       {navPage === APP_PAGES.APP.LOGIN && <LoginScreen />}
       {navPage === APP_PAGES.APP.HOME && <HomeScreen />}
+      {navPage === APP_PAGES.APP.MESSAGE && <MessageScreen />}
     </>
   );
 };
