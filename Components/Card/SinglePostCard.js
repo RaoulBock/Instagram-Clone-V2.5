@@ -4,7 +4,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Dimensions
+  Dimensions,
+  Modal
 } from "react-native";
 import { Ionicons } from "react-native-vector-icons";
 import React from "react";
@@ -17,6 +18,8 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const SinglePostCard = ({ item }) => {
+  const [modalVisible, setModalVisible] = React.useState(false);
+
   return (
     <View style={styles.outline}>
       <View style={styles.header}>
@@ -30,7 +33,7 @@ const SinglePostCard = ({ item }) => {
             <Text style={[styles.text, styles.time]}>{item.time}</Text>
           </View>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setModalVisible(true)}>
           <Text>{APP_ICON.ELLIPSIS}</Text>
         </TouchableOpacity>
       </View>
@@ -39,6 +42,27 @@ const SinglePostCard = ({ item }) => {
       <PostLikeSection />
       <PostPeopleLike />
       <PostComment />
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Hello World!</Text>
+            <TouchableOpacity
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -83,5 +107,38 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "500",
     color: "#6d7e87"
+  },
+
+  centeredView: {
+    flex: 1
+  },
+  modalView: {
+    backgroundColor: "white",
+
+    padding: 35,
+    alignItems: "center",
+    height: "50%",
+    width: "100%",
+    position: "absolute",
+    bottom: 0
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF"
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3"
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    textAlign: "center"
   }
 });
