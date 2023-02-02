@@ -8,11 +8,14 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import React from "react";
-import { COLORS } from "../Context/settings";
+import { APP_PAGES, COLORS } from "../Context/settings";
 import Input from "../Components/Inputs/Input";
 import Button from "../Components/Button/Button";
+import { AppContext } from "../Context/AppContext";
 
 const LoginScreen = () => {
+  const { setNavPage } = React.useContext(AppContext);
+
   return (
     <View style={styles.outline}>
       <KeyboardAvoidingView style={{ flex: 1 }}>
@@ -33,7 +36,10 @@ const LoginScreen = () => {
             Don't have an account?{" "}
             <Text style={{ color: "white" }}>Register</Text>
           </Text>
-          <Button title={"Login"} />
+          <Button
+            title={"Login"}
+            onPress={() => setNavPage(APP_PAGES.APP.HOME)}
+          />
         </View>
       </View>
     </View>

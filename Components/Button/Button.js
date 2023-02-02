@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { COLORS } from "../../Context/settings";
 
-const Button = ({ title }) => {
+const Button = ({ title, onPress }) => {
   return (
-    <View style={styles.outline}>
+    <TouchableOpacity onPress={onPress} style={styles.outline}>
       <Text style={styles.title}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
