@@ -6,6 +6,7 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import { Ionicons } from "react-native-vector-icons";
 import React from "react";
 import { APP_ICON, COLORS } from "../../Context/settings";
 
@@ -13,6 +14,8 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const SinglePostCard = ({ item }) => {
+  const [isLiked, setIsLiked] = React.useState(false);
+
   return (
     <View style={styles.outline}>
       <View style={styles.header}>
@@ -31,6 +34,21 @@ const SinglePostCard = ({ item }) => {
         </TouchableOpacity>
       </View>
       <Image source={{ uri: item.post }} style={styles.post} />
+
+      <View style={[styles.grid, styles.sectionGrid]}>
+        <View style={styles.grid}>
+          <Ionicons
+            name={"ios-heart-outline"}
+            style={isLiked ? styles.isLiked : styles.icon}
+          />
+          <Ionicons
+            name={"ios-chatbubble-outline"}
+            style={[styles.icon, { marginHorizontal: 20, fontSize: 30 }]}
+          />
+          <Ionicons name={"ios-share-outline"} style={styles.icon} />
+        </View>
+        <Ionicons name={"ios-bookmark-outline"} style={styles.icon} />
+      </View>
     </View>
   );
 };
@@ -76,5 +94,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "500",
     color: "#6d7e87",
+  },
+  sectionGrid: {
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginHorizontal: 10,
+    marginVertical: 10,
+  },
+  icon: {
+    color: "white",
+    fontWeight: 700,
+    fontSize: 32,
   },
 });
