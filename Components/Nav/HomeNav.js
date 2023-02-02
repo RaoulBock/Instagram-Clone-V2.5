@@ -1,14 +1,20 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { APP_ICON } from "../../Context/settings";
+import { APP_ICON, APP_PAGES } from "../../Context/settings";
+import { AppContext } from "../../Context/AppContext";
 
 const HomeNav = () => {
+  const { setNavPage } = React.useContext(AppContext);
+
   return (
     <View style={styles.outline}>
       <TouchableOpacity style={styles.btn}>
         <Text>{APP_ICON.CAMERA}</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => setNavPage(APP_PAGES.APP.MESSAGE)}
+      >
         <Text>{APP_ICON.MESSAGE}</Text>
       </TouchableOpacity>
     </View>
@@ -23,9 +29,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 10,
-    marginBottom: 10,
+    marginBottom: 10
   },
   btn: {
-    padding: 10,
-  },
+    padding: 10
+  }
 });

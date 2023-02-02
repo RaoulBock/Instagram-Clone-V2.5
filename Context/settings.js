@@ -99,6 +99,18 @@ export const APP_ICON = {
       name={"ios-person-remove-outline"}
       style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
     />
+  ),
+  BACK: (
+    <Ionicons
+      name={"ios-arrow-back-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  CREATE: (
+    <Ionicons
+      name={"ios-duplicate-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
   )
 };
 
