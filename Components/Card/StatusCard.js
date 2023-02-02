@@ -15,17 +15,17 @@ export default StatusCard;
 
 const styles = StyleSheet.create({
   outline: {
-    paddingHorizontal: 10,
-    alignItems: "center",
+    paddingHorizontal: 6,
+    alignItems: "center"
   },
   image: {
-    width: 80,
-    height: 80,
-    borderRadius: 50,
+    width: 50,
+    height: 50,
+    borderRadius: 50
   },
   name: {
     color: COLORS.TITLE_TEXT_COLOR,
-    fontWeight: "600",
-    marginTop: 10,
-  },
+
+    marginTop: 10
+  }
 });

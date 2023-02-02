@@ -20,7 +20,7 @@ const PostLikeSection = () => {
         <TouchableOpacity>
           <Ionicons
             name={"ios-chatbubble-outline"}
-            style={[styles.icon, { marginHorizontal: 20, fontSize: 30 }]}
+            style={[styles.icon, { marginHorizontal: 20, fontSize: 23 }]}
           />
         </TouchableOpacity>
         <TouchableOpacity>
@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
   icon: {
     color: "white",
     fontWeight: 700,
-    fontSize: 32
+    fontSize: 23
   },
   isLiked: {
     color: "#f66",
     fontWeight: 700,
-    fontSize: 32
+    fontSize: 23
   },
-  isSaved: { color: "#f66", fontWeight: 700, fontSize: 32 },
+  isSaved: { color: "#f66", fontWeight: 700, fontSize: 23 },
   grid: {
     flexDirection: "row"
   }

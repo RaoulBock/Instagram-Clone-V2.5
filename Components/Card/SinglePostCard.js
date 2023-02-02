@@ -181,8 +181,8 @@ const styles = StyleSheet.create({
     resizeMode: "stretch"
   },
   profile_image: {
-    width: 60,
-    height: 60,
+    width: 40,
+    height: 40,
     borderRadius: 50
   },
   grid: {
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   text: {
     color: COLORS.TITLE_TEXT_COLOR,
     fontWeight: "700",
-    fontSize: 20
+    fontSize: 18
   },
   time: {
     fontSize: 15,
