@@ -4,31 +4,17 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Dimensions,
-  Alert
+  Dimensions
 } from "react-native";
 import { Ionicons } from "react-native-vector-icons";
 import React from "react";
 import { APP_ICON, COLORS } from "../../Context/settings";
-import DoubleClick from "react-native-double-click";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const SinglePostCard = ({ item }) => {
   const [isLiked, setIsLiked] = React.useState(false);
-
-  const [clickCount, setClickCount] = React.useState(0);
-
-  const handleClick = () => {
-    setClickCount(clickCount + 1);
-
-    if (clickCount === 1) {
-      Alert.alert("This is awesome \n Double tap succeed");
-    } else {
-      setClickCount(0);
-    }
-  };
 
   return (
     <View style={styles.outline}>
@@ -47,9 +33,7 @@ const SinglePostCard = ({ item }) => {
           <Text>{APP_ICON.ELLIPSIS}</Text>
         </TouchableOpacity>
       </View>
-      <DoubleClick onPress={handleClick}>
-        <Image source={{ uri: item.post }} style={styles.post} />
-      </DoubleClick>
+      <Image source={{ uri: item.post }} style={styles.post} />
 
       <View style={[styles.grid, styles.sectionGrid]}>
         <View style={styles.grid}>
@@ -98,7 +82,7 @@ const styles = StyleSheet.create({
   },
   post: {
     width: windowWidth,
-    height: 400,
+    height: 300,
     resizeMode: "stretch"
   },
   profile_image: {

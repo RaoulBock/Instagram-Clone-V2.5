@@ -6,13 +6,14 @@ import {
   StatusBar,
   FlatList,
   Image,
-  ScrollView,
+  ScrollView
 } from "react-native";
 import React from "react";
 import { COLORS, STATUS_DATA, POST_DATA } from "../Context/settings";
 import HomeNav from "../Components/Nav/HomeNav";
 import StatusCard from "../Components/Card/StatusCard";
 import SinglePostCard from "../Components/Card/SinglePostCard";
+import BottomNav from "../Components/Nav/BottomNav";
 
 const HomeScreen = () => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -31,6 +32,7 @@ const HomeScreen = () => {
           return <SinglePostCard key={i} item={e} />;
         })}
       </ScrollView>
+      <BottomNav />
     </View>
   );
 };
@@ -41,6 +43,6 @@ const styles = StyleSheet.create({
   outline: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    backgroundColor: COLORS.BACKGROUND,
-  },
+    backgroundColor: COLORS.BACKGROUND
+  }
 });

@@ -3,7 +3,7 @@ import { APP_PAGES } from "./settings";
 
 export const AppContext = React.createContext({
   navPage: "",
-  setNavPage: (val) => {},
+  setNavPage: (val) => {}
 });
 
 const AppProvider = ({ children }) => {
@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         navPage,
-        setNavPage,
+        setNavPage
       }}
     >
       {children}
