@@ -15,6 +15,7 @@ const windowHeight = Dimensions.get("window").height;
 
 const SinglePostCard = ({ item }) => {
   const [isLiked, setIsLiked] = React.useState(false);
+  const [isSaved, setIsSaved] = React.useState(false);
 
   return (
     <View style={styles.outline}>
@@ -56,9 +57,15 @@ const SinglePostCard = ({ item }) => {
             <Ionicons name={"ios-share-outline"} style={styles.icon} />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Ionicons name={"ios-bookmark-outline"} style={styles.icon} />
-        </TouchableOpacity>
+        {isSaved ? (
+          <TouchableOpacity onPress={() => setIsSaved(!isSaved)}>
+            <Ionicons name={"ios-bookmark"} style={styles.isSaved} />
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity onPress={() => setIsSaved(!isSaved)}>
+            <Ionicons name={"ios-bookmark-outline"} style={styles.icon} />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -121,5 +128,6 @@ const styles = StyleSheet.create({
     color: "#f66",
     fontWeight: 700,
     fontSize: 32
-  }
+  },
+  isSaved: { color: "#f66", fontWeight: 700, fontSize: 32 }
 });

@@ -94,7 +94,7 @@ export const POST_DATA = [
   {
     id: 1,
     profile_image:
-      "https://www.nicepng.com/png/detail/503-5032612_girl-illustrations-illustration-girl-3d-girl-summer-tubes.png",
+      "https://i.pinimg.com/236x/2e/89/f6/2e89f66576a09f23a1ecc0a09e16fbe7.jpg",
     username: "John Martinez",
     time: "16 min ago",
     post: "https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=75,format=auto/uploads/2021/06/CON178%E2%80%93JuneBlog%E2%80%933D.jpg"

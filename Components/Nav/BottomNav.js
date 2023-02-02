@@ -46,7 +46,9 @@ const styles = StyleSheet.create({
     padding: 5,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    borderTopWidth: 1,
+    borderTopColor: "#707582"
   },
   btn: {
     padding: 10
