@@ -29,13 +29,13 @@ const HomeScreen = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   return (
     <View style={styles.outline}>
+      <HomeNav />
       <ScrollView
         contentContainerStyle={styles.scrollView}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
       >
-        <HomeNav />
         <View style={{ marginVertical: 5, marginBottom: 20 }}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {STATUS_DATA.map((e, i) => {

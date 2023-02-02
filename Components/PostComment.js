@@ -1,4 +1,10 @@
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  TouchableOpacity
+} from "react-native";
 import React from "react";
 
 const windowWidth = Dimensions.get("window").width;
@@ -8,7 +14,7 @@ const PostComment = () => {
   const COMMENT_DATA = [
     {
       id: 1,
-      name: "lana_smith",
+      name: "john_mart",
       comment:
         "Let me know what you think; #cringey ? #awesome ? Sounds i make more? my Honor and Haven is my favorite thing."
     }
@@ -19,11 +25,13 @@ const PostComment = () => {
       {COMMENT_DATA.map((e, i) => {
         return (
           <View key={i} style={styles.container}>
-            <Text style={styles.title}>{e.name}</Text>
-            <Text style={styles.text}>{e.comment}</Text>
+            <Text style={styles.title}>"{e.comment}"</Text>
           </View>
         );
       })}
+      <TouchableOpacity>
+        <Text style={styles.text}>View all 40 comments</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -41,7 +49,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontWeight: "700",
-    fontSize: 22
+    fontWeight: "500",
+    fontSize: 15
   }
 });
