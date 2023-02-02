@@ -163,3 +163,38 @@ export const POST_DATA = [
     post: "https://digitalsynopsis.com/wp-content/uploads/2015/05/3d-graffiti-street-art-anamorphic-odeith-1.jpg"
   }
 ];
+
+export const MESSAGE_DATA = [
+  {
+    id: 1,
+    name: "Joanna Evans",
+    message:
+      "Ipsum qui eu ipsum est deserunt cupidatat consequat Lorem consectetur ad ad ut reprehenderit veniam. Adipisicing amet cupidatat aute eiusmod magna exercitation dolore id et. Ipsum voluptate ex mollit ad ipsum ad exercitation ex tempor irure nostrud ullamco eiusmod. Id qui commodo enim veniam voluptate exercitation esse nostrud nisi nulla velit velit.",
+    image:
+      "https://i.insider.com/5cb8b133b8342c1b45130629?width=1136&format=jpeg"
+  },
+  {
+    id: 2,
+    name: "Liam Smith",
+    message:
+      "Aute commodo dolor minim sit nulla elit sunt veniam cillum in. Excepteur magna adipisicing est magna ea ea pariatur. Dolor officia consectetur esse sit adipisicing duis dolore aute sit.",
+    image:
+      "https://www.psypost.org/wp-content/uploads/2021/02/Confident-boss-business-man-with-smug-expression-arrogant-smirk-in-suit-and-tie-750x375.jpg"
+  },
+  {
+    id: 3,
+    name: "Diana Slown",
+    message:
+      "Pariatur voluptate sit irure ad veniam amet. Pariatur elit nisi culpa laborum do. Dolore et exercitation est Lorem ad aute officia.",
+    image:
+      "https://images.everydayhealth.com/images/tips-for-people-newly-diagnosed-with-multiple-sclerosis-alt-1440x810.jpg"
+  },
+  {
+    id: 4,
+    name: "Jennifer Tacker",
+    message:
+      "Do labore ullamco dolor et ex adipisicing magna officia nulla aute incididunt amet. Dolor laborum est nisi sit non qui nostrud. Adipisicing eiusmod magna labore culpa amet ipsum commodo quis. Esse cupidatat duis nulla officia mollit mollit cupidatat velit voluptate anim ad commodo.",
+    image:
+      "https://static.bangkokpost.com/media/content/20200619/c1_1937552_200619122619.jpg"
+  }
+];
