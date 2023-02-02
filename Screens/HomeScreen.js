@@ -8,9 +8,10 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-import { COLORS, STATUS_DATA } from "../Context/settings";
+import { COLORS, STATUS_DATA, POST_DATA } from "../Context/settings";
 import HomeNav from "../Components/Nav/HomeNav";
 import StatusCard from "../Components/Card/StatusCard";
+import SinglePostCard from "../Components/Card/SinglePostCard";
 
 const HomeScreen = () => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -29,7 +30,17 @@ const HomeScreen = () => {
           showsHorizontalScrollIndicator={false}
         />
       </View>
-      <Text>hi</Text>
+      <View>
+        <FlatList
+          data={POST_DATA}
+          renderItem={({ item }) => <SinglePostCard item={item} />}
+          keyExtractor={(item) => `${item.id}-${item.name}`}
+          initialNumToRender={5}
+          onEndReachedThreshold={0.5}
+          maxToRenderPerBatch={5}
+          showsHorizontalScrollIndicator={false}
+        />
+      </View>
     </View>
   );
 };

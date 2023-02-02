@@ -65,3 +65,14 @@ export const STATUS_DATA = [
     image: "https://data.whicdn.com/images/265677095/original.jpg",
   },
 ];
+
+export const POST_DATA = [
+  {
+    id: 1,
+    profile_image:
+      "https://www.nicepng.com/png/detail/503-5032612_girl-illustrations-illustration-girl-3d-girl-summer-tubes.png",
+    username: "JOhn Martinez",
+    time: "16min ago",
+    post: "https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=75,format=auto/uploads/2021/06/CON178%E2%80%93JuneBlog%E2%80%933D.jpg",
+  },
+];
