@@ -75,4 +75,12 @@ export const POST_DATA = [
     time: "16 min ago",
     post: "https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=75,format=auto/uploads/2021/06/CON178%E2%80%93JuneBlog%E2%80%933D.jpg",
   },
+  {
+    id: 2,
+    profile_image:
+      "https://i.pinimg.com/564x/3c/cb/37/3ccb37041d5cc911f69b016ffdf83b7a.jpg",
+    username: "Samantha Mortal",
+    time: "4 hrs ago",
+    post: "https://digitalsynopsis.com/wp-content/uploads/2015/05/3d-graffiti-street-art-anamorphic-odeith-1.jpg",
+  },
 ];

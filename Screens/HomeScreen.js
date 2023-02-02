@@ -6,6 +6,7 @@ import {
   StatusBar,
   FlatList,
   Image,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import { COLORS, STATUS_DATA, POST_DATA } from "../Context/settings";
@@ -17,30 +18,19 @@ const HomeScreen = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   return (
     <View style={styles.outline}>
-      <HomeNav />
-      <View style={{ marginVertical: 10, marginBottom: 20 }}>
-        <FlatList
-          data={STATUS_DATA}
-          renderItem={({ item }) => <StatusCard item={item} />}
-          keyExtractor={(item) => `${item.id}-${item.name}`}
-          initialNumToRender={5}
-          onEndReachedThreshold={0.5}
-          maxToRenderPerBatch={5}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-        />
-      </View>
-      <View>
-        <FlatList
-          data={POST_DATA}
-          renderItem={({ item }) => <SinglePostCard item={item} />}
-          keyExtractor={(item) => `${item.id}-${item.name}`}
-          initialNumToRender={5}
-          onEndReachedThreshold={0.5}
-          maxToRenderPerBatch={5}
-          showsHorizontalScrollIndicator={false}
-        />
-      </View>
+      <ScrollView>
+        <HomeNav />
+        <View style={{ marginVertical: 10, marginBottom: 20 }}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {STATUS_DATA.map((e, i) => {
+              return <StatusCard key={i} item={e} />;
+            })}
+          </ScrollView>
+        </View>
+        {POST_DATA.map((e, i) => {
+          return <SinglePostCard key={i} item={e} />;
+        })}
+      </ScrollView>
     </View>
   );
 };

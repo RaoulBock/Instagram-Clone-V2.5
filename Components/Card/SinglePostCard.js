@@ -39,8 +39,8 @@ export default SinglePostCard;
 
 const styles = StyleSheet.create({
   outline: {
-    borderTopWidth: 2,
-    borderTopColor: "#2c2e34",
+    // borderTopWidth: 2,
+    // borderTopColor: "#2c2e34",
     marginTop: 7,
   },
   header: {
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
   },
   post: {
     width: windowWidth,
-    height: 500,
+    height: 400,
+    resizeMode: "stretch",
   },
   profile_image: {
     width: 60,
