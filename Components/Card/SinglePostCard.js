@@ -20,6 +20,47 @@ const windowHeight = Dimensions.get("window").height;
 const SinglePostCard = ({ item }) => {
   const [modalVisible, setModalVisible] = React.useState(false);
 
+  const TOP_OPTIONS = [
+    {
+      id: 1,
+      name: "Share",
+      icon: APP_ICON.SHARE
+    },
+    {
+      id: 2,
+      name: "Link",
+      icon: APP_ICON.LINK
+    },
+    {
+      id: 3,
+      name: "Save",
+      icon: APP_ICON.BOOKMARK
+    },
+    {
+      id: 4,
+      name: "Re-Post",
+      icon: APP_ICON.RE_POST
+    },
+    {
+      id: 5,
+      name: "Qr code",
+      icon: APP_ICON.QR_CODE
+    }
+  ];
+
+  const MIDDLE_OPTION_DATA = [
+    {
+      id: 1,
+      name: "Add to favorite",
+      icon: APP_ICON.STAR
+    },
+    {
+      id: 1,
+      name: "Unfollow",
+      icon: APP_ICON.UN_FRIEND
+    }
+  ];
+
   return (
     <View style={styles.outline}>
       <View style={styles.header}>
@@ -52,14 +93,66 @@ const SinglePostCard = ({ item }) => {
         }}
       >
         <View style={styles.centeredView}>
+          <TouchableOpacity
+            style={styles.overlay}
+            onPress={() => setModalVisible(!modalVisible)}
+          />
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
-            <TouchableOpacity
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}
+            <View
+              style={[
+                styles.grid,
+                {
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "100%"
+                }
+              ]}
             >
-              <Text style={styles.textStyle}>Hide Modal</Text>
-            </TouchableOpacity>
+              {TOP_OPTIONS.map((e, i) => {
+                return (
+                  <View
+                    key={i}
+                    style={{ alignItems: "center", marginVertical: 20 }}
+                  >
+                    <TouchableOpacity style={styles.btn}>
+                      <Text>{e.icon}</Text>
+                    </TouchableOpacity>
+                    <Text
+                      style={[
+                        styles.text,
+                        { fontWeight: "500", fontSize: 14, marginTop: 10 }
+                      ]}
+                    >
+                      {e.name}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
+            <View>
+              {MIDDLE_OPTION_DATA.map((e, i) => {
+                return (
+                  <TouchableOpacity
+                    key={i}
+                    style={[styles.grid, { alignItems: "center" }]}
+                  >
+                    <Text>{e.icon}</Text>
+                    <Text
+                      style={[
+                        styles.text,
+                        {
+                          fontWeight: "500",
+                          paddingHorizontal: 10,
+                          marginVertical: 20
+                        }
+                      ]}
+                    >
+                      {e.name}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
           </View>
         </View>
       </Modal>
@@ -110,35 +203,30 @@ const styles = StyleSheet.create({
   },
 
   centeredView: {
-    flex: 1
+    flex: 1,
+    zIndex: 1
   },
   modalView: {
-    backgroundColor: "white",
-
-    padding: 35,
-    alignItems: "center",
-    height: "50%",
+    backgroundColor: COLORS.BACKGROUND,
+    paddingHorizontal: 10,
+    height: "60%",
     width: "100%",
     position: "absolute",
-    bottom: 0
+    bottom: 0,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2
+  overlay: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: COLORS.BACKGROUND,
+    zIndex: 0,
+    opacity: 0.8
   },
-  buttonOpen: {
-    backgroundColor: "#F194FF"
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3"
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-  modalText: {
-    textAlign: "center"
+  btn: {
+    borderWidth: 1,
+    borderColor: COLORS.TITLE_TEXT_COLOR,
+    padding: 15,
+    borderRadius: 50
   }
 });

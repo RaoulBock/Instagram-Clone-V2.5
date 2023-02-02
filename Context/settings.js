@@ -56,6 +56,48 @@ export const APP_ICON = {
       name={"ios-person-outline"}
       style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
     />
+  ),
+  SHARE: (
+    <Ionicons
+      name={"ios-share-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  LINK: (
+    <Ionicons
+      name={"ios-link-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  BOOKMARK: (
+    <Ionicons
+      name={"ios-bookmark-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  QR_CODE: (
+    <Ionicons
+      name={"ios-qr-code-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  RE_POST: (
+    <Ionicons
+      name={"ios-repeat-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  STAR: (
+    <Ionicons
+      name={"ios-star-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
+  UN_FRIEND: (
+    <Ionicons
+      name={"ios-person-remove-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
   )
 };
 
