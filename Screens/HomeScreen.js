@@ -17,27 +17,19 @@ const HomeScreen = () => {
   return (
     <View style={styles.outline}>
       <HomeNav />
-      <FlatList
-        data={STATUS_DATA}
-        renderItem={({ item }) => <StatusCard item={item} />}
-        keyExtractor={(item) => `${item.id}-${item.name}`}
-        initialNumToRender={5}
-        onEndReachedThreshold={0.5}
-        maxToRenderPerBatch={5}
-        horizontal
-        onEndReached={() => {
-          setIsLoading(true);
-          // fetch more data
-          setIsLoading(false);
-        }}
-        ListFooterComponent={
-          isLoading ? (
-            <View style={styles.loadingContainer}>
-              <ActivityIndicator size="large" color="#0000ff" />
-            </View>
-          ) : null
-        }
-      />
+      <View style={{ marginVertical: 10, marginBottom: 20 }}>
+        <FlatList
+          data={STATUS_DATA}
+          renderItem={({ item }) => <StatusCard item={item} />}
+          keyExtractor={(item) => `${item.id}-${item.name}`}
+          initialNumToRender={5}
+          onEndReachedThreshold={0.5}
+          maxToRenderPerBatch={5}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+      </View>
+      <Text>hi</Text>
     </View>
   );
 };

@@ -27,6 +27,12 @@ export const APP_ICON = {
       style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
     />
   ),
+  ELLIPSIS: (
+    <Ionicons
+      name={"ios-ellipsis-vertical-outline"}
+      style={{ color: COLORS.TITLE_TEXT_COLOR, fontSize: 28 }}
+    />
+  ),
 };
 
 export const STATUS_DATA = [

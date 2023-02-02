@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 10,
-    paddingVertical: 10,
   },
   btn: {
     padding: 10,
