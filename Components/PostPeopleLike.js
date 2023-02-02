@@ -28,7 +28,7 @@ export default PostPeopleLike;
 
 const styles = StyleSheet.create({
   outline: {
-    marginVertical: 10,
+    marginVertical: 4,
     marginHorizontal: 10
   },
   image: {

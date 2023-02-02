@@ -21,7 +21,7 @@ const HomeScreen = () => {
     <View style={styles.outline}>
       <ScrollView>
         <HomeNav />
-        <View style={{ marginVertical: 10, marginBottom: 20 }}>
+        <View style={{ marginVertical: 5, marginBottom: 20 }}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {STATUS_DATA.map((e, i) => {
               return <StatusCard key={i} item={e} />;

@@ -11,6 +11,7 @@ import React from "react";
 import { APP_ICON, COLORS } from "../../Context/settings";
 import PostLikeSection from "../PostLikeSection";
 import PostPeopleLike from "../PostPeopleLike";
+import PostComment from "../PostComment";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -37,6 +38,7 @@ const SinglePostCard = ({ item }) => {
 
       <PostLikeSection />
       <PostPeopleLike />
+      <PostComment />
     </View>
   );
 };
@@ -47,15 +49,14 @@ const styles = StyleSheet.create({
   outline: {
     // borderTopWidth: 2,
     // borderTopColor: "#2c2e34",
-    marginTop: 7
+    marginBottom: 20
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 10,
     marginVertical: 10,
-    alignItems: "center",
-    marginVertical: 20
+    alignItems: "center"
   },
   post: {
     width: windowWidth,
